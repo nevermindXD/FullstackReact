@@ -1,5 +1,9 @@
-188
+220
 
 ////////////////
 prototype
 this
+
+react hooks
+redux
+new life cycle

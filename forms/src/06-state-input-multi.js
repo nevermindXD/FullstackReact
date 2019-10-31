@@ -9,7 +9,8 @@ module.exports = class extends React.Component {
   state = {
     fields: {
       name: '',
-      email: ''
+      email: '',
+      phone: ''
     },
     people: []
   };
@@ -20,7 +21,8 @@ module.exports = class extends React.Component {
       people,
       fields: {
         name: '',
-        email: ''
+        email: '',
+        phone:''
       }
     });
     evt.preventDefault();
@@ -51,6 +53,13 @@ module.exports = class extends React.Component {
             value={this.state.fields.email}
             onChange={this.onInputChange}
           />
+          
+          <input
+            placeholder="Phone"
+            name="phone"
+            value={this.state.fields.phone}
+            onChange={this.onInputChange}
+          />
 
           <input type="submit" />
         </form>
@@ -58,9 +67,9 @@ module.exports = class extends React.Component {
         <div>
           <h3>People</h3>
           <ul>
-            {this.state.people.map(({name, email}, i) => (
+            {this.state.people.map(({name, email, phone}, i) => (
               <li key={i}>
-                {name} ({email})
+                {name} ({email}) {phone}
               </li>
             ))}
           </ul>
